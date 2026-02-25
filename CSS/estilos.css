@@ -1,0 +1,58 @@
+/* Estilo para el Navbar*/
+.navbar {
+    background-color: #0a0f2e !important;
+}
+
+#link_inicio .nav-link {
+    color: #e8d8d8;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#link_inicio .nav-link:hover {
+    color: #e8d8d8;
+    background-color: #1a2a5e;
+}
+#btn_notificacion img, #btn_carrito img {
+    transition: transform 0.3s ease; 
+}
+
+#btn_notificacion:hover img, #btn_carrito:hover img {
+    transform: scale(1.2);
+}
+
+#btn_iniciar_sesion, #btn_registrar {
+    transition: all 0.3s ease;
+}
+
+#btn_iniciar_sesion:hover {
+    background-color: #e8d8d8;
+    color: #0a0f2e;
+}
+
+#btn_registrar:hover {
+    background-color: #0d47a1;
+    border-color: #0d47a1;
+}
+/* Estilo para el Sildebar */
+#sidebar {
+    width: 170px;
+    min-height: 90vh;
+    background-color: #0a0f2e;
+}
+
+#sidebar .nav-link {
+    color: #c8d0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#sidebar .nav-link:hover {
+    color: #d6c5c5;
+    background-color: #1a2a5e;
+    padding-left: 15px;
+}
+/* Estilo para el fondo de la pagina*/
+.body{
+    background-color: #353b40;
+}
