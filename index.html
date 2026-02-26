@@ -82,7 +82,6 @@
                     </a>
                 </li>
             </ul>
-
             <!-- Marca -->
             <span class="text-white fw-bold mb-2">MARCA</span>
             <ul class="nav flex-column">
@@ -114,11 +113,106 @@
         </div>
         <!-- CONTENIDO PRINCIPAL -->
         <div class="flex-grow-1 p-4">
-            <!-- Aquí irán los productos -->
+            <!-- BANNER -->
+            <div id="banner" class="d-flex align-items-center justify-content-between p-4 mx-3 mt-3 rounded">
+                <div class="banner-texto">
+                    <h1 class="text-white fw-bold">DOMINA EL TERRENO</h1>
+                    <p class="text-white mt-3">
+                        Equípate con los mejores accesorios de fútbol <br>
+                        y marca la diferencia en cada partido, entrenando <br>
+                        y compitiendo con la calidad, comodidad y estilo <br>
+                        que tu juego merece.
+                    </p>
+                </div>
+                <div>
+                    <img src="imagenes/logo/zone_sport.png" alt="Logo" class="banner-logo">
+                </div>
+            </div>
+            <!-- PRODUCTOS -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4 mt-2">
+                <!-- Tarjeta 1 -->
+                <div class="col">
+                    <div class="card h-100" id="card_producto">
+                        <img src="imagenes/imagenes_productos/camiseta.webp" class="card-img-top p-2" alt="Camiseta">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title fw-bold" id="titulo_producto">
+                                MOCKUP CAMISETA DE FUTBOL VAQUERIA FC
+                            </h6>
+                            <p class="card-text pequeño flex-grow-1">Mockup de camiseta oficial de fútbol del Vaquería
+                                FC, diseñado para representar la identidad y el carácter del equipo.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="fw-bold text-white fs-5">$160.00</span>
+                                <button class="btn btn-sm" id="btn_carrito_producto">
+                                    <img src="imagenes/iconos/carrito_compras.png" width="20" height="20">
+                                    Añadir al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="col">
+                    <div class="card h-100" id="card_producto">
+                        <img src="imagenes/imagenes_productos/balon.webp" class="card-img-top p-2" alt="Balon">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title fw-bold" id="titulo_producto">Balón de futbol AC Milán numero #5</h6>
+                            <p class="card-text pequeño flex-grow-1">Balón oficial del AC Milán de Puma con colores
+                                icónicos y escudo.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="fw-bold text-white fs-5">$80.00</span>
+                                <button class="btn btn-sm" id="btn_carrito_producto">
+                                    <img src="imagenes/iconos/carrito_compras.png" width="20" height="20">
+                                    Añadir al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="col">
+                    <div class="card h-100" id="card_producto">
+                        <img src="imagenes/imagenes_productos/zapatiilas.webp" class="card-img-top p-2" alt="Zapatillas">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title fw-bold" id="titulo_producto">Zapatillas FASHION SPORT</h6>
+                            <p class="card-text pequeño flex-grow-1">Zapatillas deportivas ligeras y transpirables,
+                                diseñadas para brindar máximo confort.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="fw-bold text-white fs-5">$190.00</span>
+                                <button class="btn btn-sm" id="btn_carrito_producto">
+                                    <img src="imagenes/iconos/carrito_compras.png" width="20" height="20">
+                                    Añadir al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="col">
+                    <div class="card h-100" id="card_producto">
+                        <img src="imagenes/imagenes_productos/guantes.webp" class="card-img-top p-2" alt="Guantes">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title fw-bold" id="titulo_producto">Guantes "ATHPIK"</h6>
+                            <p class="card-text pequeño flex-grow-1">Guantes de arquero diseñados para máxima protección
+                                y agarre superior en cada atajada.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="fw-bold text-white fs-5">$60.00</span>
+                                <button class="btn btn-sm" id="btn_carrito_producto">
+                                    <img src="imagenes/iconos/carrito_compras.png" width="20" height="20">
+                                    Añadir al Carrito
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+    </script>
 </body>
 </html>
