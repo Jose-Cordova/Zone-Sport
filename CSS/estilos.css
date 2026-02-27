@@ -1,6 +1,11 @@
 /* Estilo para el Navbar*/
 .navbar {
     background-color: #0a0f2e !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
 }
 
 #link_inicio .nav-link {
@@ -13,7 +18,7 @@
     color: #e8d8d8;
     background-color: #1a2a5e;
 }
-#btn_notificacion img, #btn_carrito img {
+#btn_notificacion img, #btn_carrito img{
     transition: transform 0.3s ease; 
 }
 
@@ -34,11 +39,15 @@
     background-color: #0d47a1;
     border-color: #0d47a1;
 }
-/* Estilo para el Sildebar */
+/* Estilo para el Sidebar */
 #sidebar {
-    width: 170px;
+    width: 275px;
     min-height: 90vh;
     background-color: #0a0f2e;
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
+   
 }
 
 #sidebar .nav-link {
@@ -55,4 +64,70 @@
 /* Estilo para el fondo de la pagina*/
 .body{
     background-color: #353b40;
+    padding-top: 60px;
+}
+/* Estilo para el baner con el logo*/
+#banner {
+    background: linear-gradient(135deg, #515f8a, #0a0f2e);
+    border: 1px solid #2a3a6e;
+    min-height: 150px;
+}
+
+.banner-texto h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.banner-texto p {
+    font-size: 0.95rem;
+    color: #c8d0e0 !important;
+}
+
+.banner-logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+/* Estilo para el apartado de los productos */
+#card_producto {
+    background-color: #cad0dc;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#card_producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#card_producto .card-img-top {
+    border-radius: 15px 15px 0;
+    height: 200px;
+    object-fit: contain;
+}
+
+#titulo_producto {
+    color: #790707;
+    font-size: 13px;
+}
+
+.pequeño {
+    font-size: 12px;
+    color: #000000;
+}
+
+#btn_carrito_producto {
+    background-color: #090d35;
+    color: #ceadad;
+    border-radius: 20px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+#btn_carrito_producto:hover {
+    background-color: #0d47a1;
+    color: #ceadad;
+}
+#card_producto span {
+    color: #000000 !important;
 }
