@@ -1,0 +1,39 @@
+/* Estilos para el formulario de pagos*/
+#card_pago {
+    background-color: #030620;
+    border: 1px solid #00bfff;
+}
+#card_resumen {
+    background-color: #030620;
+    border: 1px solid #2a3a6e;
+}
+.input_pago {
+    background-color: #555f7b !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+.input_pago:focus {
+    box-shadow: 0 0 0 2px #00bfff !important;
+}
+#btn_pagar {
+    background-color: #1a51f6;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+#btn_pagar:hover {
+    background-color: #0044cc;
+    color: white;
+}
+#card_cliente {
+    background-color: #c8d0e0;
+}
+h5{
+    color: #e8d8d8 !important;
+}
+hr{
+    border-color: #ffffff; 
+    border-width: 5px; 
+    opacity: 1;
+}

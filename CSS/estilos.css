@@ -18,7 +18,7 @@
     color: #e8d8d8;
     background-color: #1a2a5e;
 }
-#btn_notificacion img, #btn_carrito img {
+#btn_notificacion img, #btn_carrito img{
     transition: transform 0.3s ease; 
 }
 
