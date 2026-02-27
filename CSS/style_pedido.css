@@ -1,0 +1,67 @@
+ .input_pedido {
+    background-color: #555f7b !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+
+#card_datosC {
+     background-color: #030620;
+    border: 1px solid #00bfff;
+}
+h5{
+    color: #e8d8d8 !important;
+}
+hr{
+    border-color: #ffffff; 
+    border-width: 5px; 
+    opacity: 1;
+}
+
+#margenes{
+  max-width: 720px;
+}
+
+ /*boton cancelar*/
+  .btnC {
+  background-color: transparent;
+  border: 2px solid #6c757d;
+  color: #dc3545;
+  border-radius: 50px;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btnC:hover {
+  border-color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.08);
+  color: #dc3545;
+}
+
+/*boton procesar*/
+.btnP {
+  background-color: transparent;
+  border: 2px solid #6c757d;
+  color: #00d084;
+  border-radius: 50px;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btnP:hover {
+  border-color: #00d084;
+  background-color: rgba(0, 208, 132, 0.08);
+  color: #00d084;
+}
+
+
+
+
