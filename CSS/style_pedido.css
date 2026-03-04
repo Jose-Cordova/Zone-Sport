@@ -62,6 +62,73 @@ hr{
   color: #00d084;
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+/*Estilo para las validaciones*/
+
+/* 1. Ocultar los textos de error por defecto */
+.formulario__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #bb2929; /* Agregamos el color rojo al texto */
+  display: none;
+}
+.formulario__input-error-activo {
+  display: block;
+}
+
+/* 2. MUY IMPORTANTE: Darle posición relativa a los contenedores para que los íconos no se vuelen */
+#grupo__nombre, #grupo__correo, #grupo__direccion, #grupo__telefono {
+    position: relative;
+}
+
+/* 3. El ícono por defecto (oculto) */
+.formulario__validacion-estado {
+  position: absolute;
+  right: 15px;
+  top: 42px; /* Lo anclamos desde arriba. Cambia este número un poquito si lo quieres más arriba o abajo */
+  z-index: 100;
+  font-size: 18px;
+  opacity: 0;
+}
+
+/* --- ESTADO CORRECTO (VERDE) --- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+  color: #1ed12d;
+  opacity: 1;
+}
+/* Le aplicamos el borde a .input_pedido y usamos !important para ganarle al border: none */
+.formulario__grupo-correcto .input_pedido {
+  border: 3px solid #1ed12d !important;
+}
+
+/* --- ESTADO INCORRECTO (ROJO) --- */
+.formulario__grupo-incorrecto .formulario__label {
+  color: #bb2929;
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
+}
+/* Le aplicamos el borde a .input_pedido y usamos !important */
+.formulario__grupo-incorrecto .input_pedido {
+  border: 3px solid #bb2929 !important;
+}
+
+/* Mensaje de error general de abajo */
+.formulario__mensaje {
+  height: 45px;
+  line-height: 45px;
+  background: #F66060;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+  color: white; /* Para que el texto resalte en el fondo rojo */
+}
+.formulario__mensaje-activo {
+  display: block;
+}
+>>>>>>> df8c5e4344719dac958dbcad5fa1bdb6e09446ff

@@ -1,6 +1,10 @@
 /* Estilo para el Navbar*/
 .navbar {
+<<<<<<< HEAD
     background-color:  #353b40!important;
+=======
+    background-color: #0a0f2e !important;
+>>>>>>> df8c5e4344719dac958dbcad5fa1bdb6e09446ff
     position: fixed !important;
     top: 0;
     left: 0;
@@ -89,24 +93,40 @@
     object-fit: contain;
 }
 /* Estilo para el apartado de los productos */
+<<<<<<< HEAD
 #card_producto {
+=======
+.card_producto {
+>>>>>>> df8c5e4344719dac958dbcad5fa1bdb6e09446ff
     background-color: #cad0dc;
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+<<<<<<< HEAD
 #card_producto:hover {
+=======
+.card_producto:hover {
+>>>>>>> df8c5e4344719dac958dbcad5fa1bdb6e09446ff
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
+<<<<<<< HEAD
 #card_producto .card-img-top {
+=======
+.card_producto .card-img-top {
+>>>>>>> df8c5e4344719dac958dbcad5fa1bdb6e09446ff
     border-radius: 15px 15px 0;
     height: 200px;
     object-fit: contain;
 }
 
+<<<<<<< HEAD
 #titulo_producto {
+=======
+.titulo_producto {
+>>>>>>> df8c5e4344719dac958dbcad5fa1bdb6e09446ff
     color: #790707;
     font-size: 13px;
 }
@@ -116,7 +136,11 @@
     color: #000000;
 }
 
+<<<<<<< HEAD
 #btn_carrito_producto {
+=======
+.btn_carrito_producto {
+>>>>>>> df8c5e4344719dac958dbcad5fa1bdb6e09446ff
     background-color: #090d35;
     color: #ceadad;
     border-radius: 20px;
@@ -124,10 +148,18 @@
     transition: all 0.3s ease;
 }
 
+<<<<<<< HEAD
 #btn_carrito_producto:hover {
     background-color: #0d47a1;
     color: #ceadad;
 }
 #card_producto span {
+=======
+.btn_carrito_producto:hover {
+    background-color: #0d47a1;
+    color: #ceadad;
+}
+.card_producto span {
+>>>>>>> df8c5e4344719dac958dbcad5fa1bdb6e09446ff
     color: #000000 !important;
 }
