@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#0f1c3f;
+    padding:15px 40px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-left a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.search{
+    background:white;
+    border-radius:20px;
+    padding:5px 15px;
+    width:250px;
+    border:none;
+    outline:none;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.icon{
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.usuario-btn{
+    background:white;
+    padding:6px 15px;
+    border-radius:20px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* BODY */
+body{
+    background:#3f444a;
+}
+
+/* CARRITO */
+.container{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.carrito{
+    background:#ffffff;
+    width:650px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.producto{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.producto img{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.info{
+    flex:1;
+    margin-left:15px;
+}
+
+.nombre{
+    font-weight:bold;
+}
+
+.precio{
+    margin-top:5px;
+}
+
+.cantidad{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.cantidad button{
+    width:30px;
+    height:30px;
+    border:none;
+    background:#e0e0e0;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.total{
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.btn-pago{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    background:#1e40af;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.btn-pago:hover{
+    background:#16328c;
+}

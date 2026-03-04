@@ -89,24 +89,24 @@
     object-fit: contain;
 }
 /* Estilo para el apartado de los productos */
-#card_producto {
+.card_producto {
     background-color: #cad0dc;
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#card_producto:hover {
+.card_producto:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-#card_producto .card-img-top {
+.card_producto .card-img-top {
     border-radius: 15px 15px 0;
     height: 200px;
     object-fit: contain;
 }
 
-#titulo_producto {
+.titulo_producto {
     color: #790707;
     font-size: 13px;
 }
@@ -116,7 +116,7 @@
     color: #000000;
 }
 
-#btn_carrito_producto {
+.btn_carrito_producto {
     background-color: #090d35;
     color: #ceadad;
     border-radius: 20px;
@@ -124,10 +124,10 @@
     transition: all 0.3s ease;
 }
 
-#btn_carrito_producto:hover {
+.btn_carrito_producto:hover {
     background-color: #0d47a1;
     color: #ceadad;
 }
-#card_producto span {
+.card_producto span {
     color: #000000 !important;
 }
