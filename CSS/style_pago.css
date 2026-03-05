@@ -37,4 +37,40 @@ hr{
     border-width: 5px; 
     opacity: 1;
 }
+/* Estilos para validar los campos */
+.error-mensaje {
+    display: none;
+    color: #ff4d4d;
+    font-size: 11px;
+    margin-top: 4px;
+}
+/* Cunado detecta un error manda el mensaje */
+.grupo-incorrecto .error-mensaje {
+    display: block;
+}
 
+.grupo-incorrecto .form-control {
+    border: 2px solid #ff4d4d !important;
+}
+
+.pago__mensaje {
+    height: 45px;
+    line-height: 45px;
+    background: #F66060; /* Rojo por defecto */
+    padding: 0 15px;
+    border-radius: 10px;
+    display: none; /* Oculto al inicio */
+    margin-bottom: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Clase para cuando el mensaje es de éxito (Verde) */
+.pago__mensaje-exito {
+    background: #11d081 !important;
+}
+
+/* Clase para mostrarlo */
+.pago__mensaje-activo {
+    display: block;
+}

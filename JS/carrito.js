@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         totalElemento.textContent = "$" + total.toFixed(2);
 
-        // 🔥 Validación del botón
+        //Validación del botón
         if (total === 0) {
             btnPagar.classList.add("disabled");
             btnPagar.style.pointerEvents = "none";

@@ -8,6 +8,11 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="/CSS/estilos.css">
   <link rel="stylesheet" href="/CSS/style_pago.css">
+  <link rel="stylesheet" href="/CSS/style_pedido.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="icon" href="/imagenes/logo/zone_sport.png" type="image/x-com">
+  <script src="/JS/pedido.js" defer></script>
+  <script src="/JS/pago.js"></script>
 </head>
 <body class="body">
   <!-- NAVBAR -->
@@ -27,7 +32,7 @@
         <!-- Link para volver al inicio -->
         <ul class="navbar-nav me-3" id="link_inicio">
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="#">Inicio</a>
+            <a class="nav-link fw-bold" href="/index.html">Inicio</a>
           </li>
         </ul>
         <!-- Barra de busqueda -->
@@ -60,24 +65,37 @@
         <div class="p-4 rounded-4" id="card_pago">
           <h5 class="fw-bold mb-2">Información de pago</h5>
           <hr>
-          <label class="text-white mb-1">*Número de tarjeta</label>
-          <input type="text" class="form-control input_pago mb-3" placeholder="0000-0000-0000-0000" id="ipt_numero_tarjeta">
-          <label class="text-white mb-1">*Fecha de nacimiento</label>
-          <div class="row g-2 mb-3">
-            <div class="col-6">
-              <input type="text" class="form-control input_pago" placeholder="MM" id="ipt_mes">
-            </div>
-            <div class="col-6">
-              <input type="text" class="form-control input_pago" placeholder="AA" id="ipt_anio">
-            </div>
+          <div class="mb-3" id="grupo__tarjeta">
+              <label class="text-white mb-1">*Número de tarjeta</label>
+              <input type="text" name="tarjeta" id="pago_tarjeta" class="form-control input_pago" placeholder="0000-0000-0000-0000">
+              <p class="error-mensaje">La tarjeta debe tener 16 dígitos.</p>
           </div>
-          <label class="text-white mb-1">*CVV</label>
-          <div class="row mb-4">
-            <div class="col-6">
-              <input type="text" class="form-control input_pago" placeholder="000" id="ipt_cvv">
-            </div>
+          <div class="row">
+              <div class="col-6" id="grupo__mes">
+                  <label class="text-white mb-1">*Mes</label>
+                  <input type="text" name="mes" id="input_pago_mes" class="form-control input_pago" placeholder="MM" maxlength="2">
+                  <p class="error-mensaje">Mes inválido (01-12).</p>
+              </div>
+              <div class="col-6" id="grupo__anio">
+                  <label class="text-white mb-1">*Año</label>
+                  <input type="text" name="anio" id="input_pago_anio" class="form-control input_pago" placeholder="AA" maxlength="2">
+                  <p class="error-mensaje">Año inválido.</p>
+              </div>
           </div>
-          <button class="btn w-100 rounded-pill fw-bold" id="btn_pagar">Pagar $0.00</button>
+          <div class="mb-3" id="grupo__cvv">
+              <label class="text-white mb-1">*CVV</label>
+              <input type="text" name="cvv" id="pago_cvv" class="form-control input_pago" placeholder="000">
+              <p class="error-mensaje">Debe tener exactamente 3 dígitos.</p>
+          </div>
+          <div id="pago__mensaje" class="pago__mensaje">
+              <p class="m-0 text-center">
+                  <span id="pago__mensaje-texto">Error: Por favor rellena el formulario correctamente.</span>
+              </p>
+          </div>
+
+          <button class="btn w-100 rounded-pill fw-bold text-white" id="btn_pagar" style="background-color: #1a56ff;">
+              Pagar $270.00
+          </button>
         </div>
       </div>
       <!-- Card del resumen del pedido -->
@@ -87,34 +105,90 @@
           <hr>
           <div class="d-flex justify-content-between mb-3">
             <span class="text-white">Total de productos</span>
-            <span class="text-white fw-bold" id="total_producto">$0.00</span>
+            <span class="text-white fw-bold" id="total_producto">$300.00</span>
           </div>
           <div class="d-flex justify-content-between mb-3">
             <span class="text-white">Descuento de artículos</span>
-            <span class="fw-bold" style="color: #00cc44;" id="descuento_articulo">$0.00</span>
+            <span class="fw-bold" style="color: #00cc44;" id="descuento_articulo">-$30.00</span>
           </div>
           <div class="d-flex justify-content-between mb-3">
             <span class="text-white">Subtotal</span>
-            <span class="text-white fw-bold" id="subtotal">$0.00</span>
+            <span class="text-white fw-bold" id="subtotal">$270.00</span>
           </div>
           <hr>
           <div class="d-flex justify-content-between">
             <h5 class="fw-bold mb-2">Total del pedido</h5>
-            <span class="fw-bold fs-5" style="color: #00bfff;" id="total_pedido">$0.00</span>
+            <span class="fw-bold fs-5" style="color: #00bfff;" id="total_pedido">$270.00</span>
           </div>
         </div>
         <!-- Informacion del cliente -->
         <div class="p-4 rounded-3 mt-3" id="card_cliente">
           <div class="d-flex justify-content-between align-items-center mb-1">
-            <span class="fw-bold text-dark" id="nombre_cliente">José Santos Córdova Córdova</span>
+            <span class="fw-bold text-dark" id="nombre_cliente">Mario Alejandro Ramírez Córdova</span>
             <div class="d-flex align-items-center gap-2">
               <span class="text-dark" id="telefono_cliente">+503 6045-3775</span>&nbsp;
-              <a href="#" id="btn_editar_info">
-                <img src="/imagenes/iconos/editar_pedido.png" alt="notificacion" width="30" height="30">
+              <a href="#" id="btn_editar_info" data-bs-toggle="modal" data-bs-target="#modalEditarInfo">
+                <img src="/imagenes/iconos/editar_pedido.png" alt="editar" width="20" height="20">
               </a>
             </div>
           </div>
-          <span class="fw-bold text-dark" id="direccion_cliente">Dirección</span>
+          <span class="fw-bold text-dark" id="direccion_cliente">Colonia Escalón <br> Calle El Mirador, Casa #123, San Salvador</span>
+        </div>
+      </div>
+      <!--Modal para editar la informacion -->
+      <div class="modal fade" id="modalEditarInfo" aria-labelledby="modalEditarInfoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="background-color: #0b1120; border: 1px solid #00bfff; color: white;">
+            <div class="modal-header border-secondary">
+              <h5 class="modal-title fw-bold">Editar Imformacion</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+              <div class="container py-5 margenes">
+            <!--Comienzo de todo el formulario -->
+            <form id="formulario" enctype="multipart/form-data">
+              <div class="row g-4 mb-4">
+                <div class="col-12">
+                  <div class="p-4 rounded-4" id="card_datosC">
+                    <h5 class="fw-bold mb-2">DATOS DEL CLIENTE</h5>
+                    <hr>
+                    <!-- Grupo: Nombre -->
+                    <div id="grupo__nombre" class="position-relative">
+                      <label for="nombre" class="text-white mb-1">Nombre completo&nbsp;<span style="color: brown;">*</span></label>
+                      <input type="text" class="form-control input_pedido mb-3" id="input_modal_nombre" name="nombre">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      <p class="formulario__input-error">El nombre no debe contener números ni caracteres especiales, solo letras.</p>
+                    </div>
+                    <!-- Grupo: Direccion -->
+                    <div id="grupo__direccion" class="position-relative">
+                      <label for="direccion" class="text-white mb-1">Dirección de entrega&nbsp;<span style="color: brown;">*</span></label>
+                      <input type="text" class="form-control input_pedido mb-3" id="input_modal_direccion" name="direccion"> 
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      <p class="formulario__input-error">La dirección de entrega no debe contener más de 255 caracteres.</p>
+                    </div>
+                    <!-- Grupo: telefono -->
+                    <div id="grupo__telefono" class="position-relative">
+                      <label for="telefono" class="text-white mb-1">Teléfono de contacto&nbsp;<span style="color: brown;">*</span></label>
+                      <input type="tel" class="form-control input_pedido mb-3" id="input_modal_telefono" name="telefono">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      <p class="formulario__input-error">El numero debe tener el + mas el codigo del pais y maximo 15 digitos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Mensage de alerta para llenar el formulario -->
+              <div class="formulario__mensaje mb-4" id="formulario__mensaje">
+                <p class="m-0"><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente.</p>
+              </div>
+            </form>
+          </div>
+            </div>
+            <div class="modal-footer border-secondary">
+              <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+              <a href="/formularios/frm_pago.html" type="button" class="btn btn-primary" style="background-color: #1a56ff;">Guardar</a>
+            </div>
+          </div>
         </div>
       </div>
       
