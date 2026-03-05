@@ -1,0 +1,90 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color:  #353b40;
+    margin: 0;
+}
+
+.header-top{
+    width: 100%;
+    height: 55px;
+    background: linear-gradient(to right, #0a1438, #020a2b);
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.logo {
+    width: 70px; 
+    height: auto; 
+    margin-right: 12px;
+}
+
+.brand-name{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.main-container{
+    height: calc(100vh - 55px);
+}
+
+.form-box{
+    background: #050c2e;
+    width: 520px;
+    padding: 40px;
+    border-radius: 30px;
+    color: white;
+}
+
+.form-box h2{
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.line{
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin-bottom: 25px;
+}
+label{
+    font-weight: 600;
+}
+.input-custom{
+    background: #626b85;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+
+.input-custom::placeholder{
+    color: #b9c4ff;
+}
+.eye-icon{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #dcdcdc;
+    cursor: pointer;
+}
+.btn-custom{
+    background: linear-gradient(to right, #2b60ff, #1c3edb);
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+.btn-custom:hover{
+    opacity: 0.9;
+}
+.link-login{
+    color: #3ad1ff;
+    text-decoration: none;
+}
+
+.link-login:hover{
+    text-decoration: underline;
+}
