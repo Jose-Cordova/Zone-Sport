@@ -1,0 +1,106 @@
+body {
+    background-color: #353b40;
+    padding-top: 60px;
+}
+
+.navbar {
+    background-color: #0a0f2e !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    height: 60px;
+}
+
+#sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #0a0f2e;
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1020;
+    transition: transform 0.3s ease;
+}
+
+#badg_admin {
+    background-color: #cbd5e1;
+    color: #121313;
+    padding: 2px 12px;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.section-content {
+    display: none;
+}
+
+.section-content.active {
+    display: block;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content {
+    margin-left: 260px;
+    padding: 30px;
+    width: calc(100% - 260px);
+    min-width: 0;
+}
+.content .card {
+    width: 100%;
+}
+
+/* Esto lo hacer responsivo , lo podemos usar para otros diseños*/
+@media (max-width: 991px) {
+        .buscador-movil {
+        display: block;
+        padding: 10px 15px;
+        background-color: #0a0f2e;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        z-index: 1025;
+    }
+
+    #sidebar.sidebar-open {
+        transform: translateX(0);
+    }
+    .content .table-responsive {
+    width: 100%;
+}
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+    .barra-busqueda-movil.open{
+        display: block;
+    }
+    .buscador-movil input{
+        width: 100%;
+    }
+   
+    body{
+        padding-top: 115px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+     
+    #sidebar {
+        transform: translateX(-100%);
+        top: 115px;
+    }
+    
+}
