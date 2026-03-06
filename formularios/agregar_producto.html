@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agregar producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/style_agregar_producto.css">
+</head>
+
+<body class="body">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!--Aqui va el logo-->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/imagenes/logo/zone_sport.png" alt="Logo" width="42" height="42" class="me-2">
+                <span class="fw-bold text-white fs-5">ZONESPORT</span>
+            </a>
+        </div>
+    </nav>
+    <!--en este parte va el formulario centrado josé-->
+    <div class="contenedor-principal">
+        <form class="card-form" id="form_agregar_producto">
+            <h2>Agregar Producto</h2>
+            <!--Esta es el area de el nombre categoria etc-->
+            <div class="form-row">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="input_nombre">
+                
+            </div>
+            <div class="form-row">
+                    <label class="form-label">Descripción</label><br>
+                    <input type="text" class="form-control" id="input_descripcion">
+                </div>
+            
+            <div class="form-row">
+                <label class="form-label">Marca</label>
+                <select class="form-select" id="select_marca">
+                    <option value="" disabled selected></option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Puma">Puma</option>
+                    <option value="Mikasa">Mikasa</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <label class="form-label">Categoría</label>
+                <select class="form-select" id="select_categoria">
+                    <option value="" disabled selected></option>
+                    <option value="Balónes">Balónes</option>
+                    <option value="Zapatillas">Zapatillas</option>
+                    <option value="Ropa">Ropa</option>
+                    
+                </select>
+            </div>
+            <!--Esta es donde puese y va el precio-->
+            <div class="form-row">
+                <label class="form-label">Precio</label>
+                <input type="number" class="form-control"  id="input_precio"  min="0" step="0.01">
+            </div>
+            <!--la parte donde va el stock es esta-->
+            <div class="form-row">
+                <label class="form-label">Stock</label>
+                <input type="number" class="form-control"  id="input_stock"  min="0">
+            </div>
+
+            <!--El estado-->
+            <div class="form-row">
+                <label class="form-label">Estado</label>
+                <select class="form-select" id="select_estado"  >
+                    <option value="" disabled selected></option>
+                    <option value="activo">Activo</option>
+                    <option value="inactivo">Inactivo</option>
+                </select>
+            </div>
+            
+            <!--esta es la parte donde vamos a poder selecionar la imagen-->
+            <!--para luego que se muestre en el panel principal-->
+            <div class="form-row">
+                <label class="form-label"> imagen del prouducto</label>
+                <input type="file" class="form-control" id="input_imagen" accept="image/*">
+            </div>
+            <!--L parte de los botones-->
+            <div class="btn-section">
+                <button type="button" class="btn btn-cancelar" id="btn_cancelar">
+                    Cancelar
+                </button>
+                <button type="submit" class=" btn btn-guardar" id="btn_guardar_producto">
+                    Guardar Producto
+                </button>
+            </div>
+        </form>
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+        <script src="/JS/agregar_producto.js"></script>
+</body>
+
+</html>

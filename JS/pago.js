@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mensajeContenedor.classList.remove('pago__mensaje-activo');
             }, 5000);
         } else {
-            mensajeTexto.innerText = "Error: Por favor, revisa los campos en rojo.";
+            mensajeTexto.innerText = "Error: Por favor, revisa que los campos esten correctos.";
             mensajeContenedor.classList.remove('pago__mensaje-exito'); 
             mensajeContenedor.classList.add('pago__mensaje-activo');
 

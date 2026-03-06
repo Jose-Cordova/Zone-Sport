@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gestión de productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/CSS/style_gestion_productos.css">
+    <script src="/JS/gestion_productos.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex align-items-center gap-3">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/imagenes/logo/zone_sport.png" width="40" height="40" class="me-2">
+                <span class="fw-bold text-white fs-5">ZONESPORT</span>
+            </a>
+
+            <div class="d-none d-lg-flex flex-grow-1">
+                <input type="text" class="form-control bg-secondary border-0 text-white"
+                    placeholder="Buscar productos..." id="imput-buscar-desktop">
+            </div>
+
+            <div class="d-flex align-items-center gap-3 my-2 my-lg-0 ms-auto">
+                <a href="#" id="btn_notificacion">
+                    <img src="/imagenes/iconos/notificacion.png" alt="notificacion" width="25" height="25">
+                </a>
+                <div class="d-flex align-items-center gap-2">
+                    <img src="/imagenes/iconos/perfil.png" width="35" height="35" class="rounded-circle" id="img_admin">
+                    <span id="badg_admin" class="text-black">Admin</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="buscador-movil d-lg-none p-2">
+        <div class="d-flex align-items-center gap-2">
+            <input type="text" class="form-control bg-secondary border-0 text-white" placeholder="Buscar productos..."
+                id="input-buscar">
+            <button class="btn btn-outline-light" id="toggleSidebar">
+                <i class="bi bi-list fs-4"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="layout">
+
+        <div id="sidebar">
+            <h6 class="text-white text-uppercase small mb-3">Operaciones</h6>
+            <nav class="nav flex-column">
+                <a href="#" class="nav-link text-white mb-3 active" data-section="section-productos">
+                    <img src="/imagenes/iconos/productos.png" width="25"> Productos
+                </a>
+                <a href="#" class="nav-link text-white mb-3" data-section="section-categorias">
+                    <img src="/imagenes/iconos/categorias.png" width="25"> Categorías
+                </a>
+                <a href="#" class="nav-link text-white mb-3" data-section="section-marcas">
+                    <img src="/imagenes/iconos/marcas.png" width="25"> Marcas
+                </a>
+            </nav>
+        </div>
+
+        <div class="content p-4">
+
+            <div class="section-content active" id="section-productos">
+                <div class="d-flex justify-content-between align-items-center mb-4 w-100">
+                    <h1 class="h4 text-white">Gestión de Productos</h1>
+                    <button class="btn btn-primary rounded-pill" id="btn-nuevo-producto">
+                        <i class="bi bi-plus-lg"></i> Nuevo producto
+                    </button>
+                </div>
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Categoría</th>
+                                    <th>Marca</th>
+                                    <th>Precio</th>
+                                    <th>Stock</th>
+                                    <th>Estado</th>
+                                    <th>Imagen</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-productos-body">
+                                <tr>
+                                    <td>Nike Air Max</td>
+                                    <td>Zapatillas</td>
+                                    <td>Nike</td>
+                                    <td>$ 150</td>
+                                    <td>10</td>
+                                    <td><span class="badge bg-success">Activo</span></td>
+                                    <td>
+                                        <img src="/imagenes/imagenes_productos/NikeAirMax.webp" width="50" height="50"
+                                            style="object-fit:cover ;">
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-warning me-1"
+                                            onclick="window.location.href='editar_producto.html'">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-danger"
+                                            onclick="alert('Producto eliminado correctamente')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Adidas Predator</td>
+                                    <td>Balones</td>
+                                    <td>Adidas</td>
+                                    <td>$ 50</td>
+                                    <td>15</td>
+                                    <td><span class="badge bg-danger">Inactivo</span></td>
+                                    <td>
+                                        <img src="/imagenes/imagenes_productos/AdidasPredator.jpg.jpeg" width="50"
+                                            height="50" style="object-fit: cover;">
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-warning me-1"
+                                            onclick="window.location.href='editar_producto.html'">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-danger"
+                                            onclick="alert('Producto eliminado correctamente')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Real Madrid Home</td>
+                                    <td>Ropa</td>
+                                    <td>Adidas</td>
+                                    <td>$125</td>
+                                    <td>7</td>
+                                    <td><span class="badge bg-danger">Inactivo</span></td>
+                                    <td>
+                                        <img src="/imagenes/imagenes_productos/mikasaZpatilla.jpg.jpeg" width="50" height="50"
+                                            style="object-fit: cover;">
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-warning me-1"
+                                            onclick="window.location.href='editar_producto.html'">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-danger"
+                                            onclick="alert('Producto eliminado correctamente')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mikasa Setball</td>
+                                    <td>Zapatillas</td>
+                                    <td>Mikasa</td>
+                                    <td>$80</td>
+                                    <td>40</td>
+                                    <td><span class="badge bg-danger">Inactivo</span></td>
+                                    <td>
+                                        <img src="/imagenes/imagenes_productos/zapatiilas.webp" width="50"
+                                            height="50" style="object-fit: cover;">
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-warning me-1"
+                                            onclick="window.location.href='editar_producto.html'">
+                                            <i class="bi bi-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-danger"
+                                            onclick="alert('Producto eliminado correctamente')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content" id="section-categorias">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="h4 text-white">Gestión de Categorías</h1>
+
+                </div>
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
+                                    <th>Productos</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Zapatillas</td>
+                                    <td>Calzado deportivo</td>
+                                    <td>2 Productos</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-danger" onclick="alert('Categoria eliminada')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Balones</td>
+                                    <td>Balones de Calidad</td>
+                                    <td>1 Producto</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-danger" onclick="alert('Categoria eliminada')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ropa</td>
+                                    <td>Esatlo al Jugar</td>
+                                    <td>2 Productos</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-danger" onclick="alert('Categoria eliminada')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content" id="section-marcas">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="h4 text-white">Gestión de Marcas</h1>
+
+                </div>
+                <div class="card bg-dark text-white border-0 shadow">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Productos</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nike</td>
+                                    <td>1 Producto</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-danger" onclick="alert('Se elimino la marca')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Adidas</td>
+                                    <td>2 Productos</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-danger" onclick="alert('Se elimino la marca')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mikasa</td>
+                                    <td>1 Producto</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-danger" onclick="alert('Se elimino la marca')">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
